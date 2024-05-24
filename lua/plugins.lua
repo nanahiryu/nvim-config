@@ -11,7 +11,11 @@ return require('packer').startup(function(use)
     },
   }
   use {'projekt0n/github-nvim-theme'}
-  use {'neoclide/coc.nvim', branch = 'release'}
+  use {
+    'neoclide/coc.nvim', 
+    branch = 'release',
+    config = function() require 'extensions.coc' end,
+  }
   use {
     'karb94/neoscroll.nvim',
     config = function() require 'extensions.neoscroll' end,
