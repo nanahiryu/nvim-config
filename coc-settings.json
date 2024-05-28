@@ -11,7 +11,8 @@
     "typescriptreact",
     "javascript",
     "javascriptreact",
-    "json"
+    "json",
+    "markdown"
   ],
   "tsserver.formatOnType": true,
   "eslint.autoFixOnSave": true,
@@ -19,6 +20,7 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "markdown"
   ]
 }
