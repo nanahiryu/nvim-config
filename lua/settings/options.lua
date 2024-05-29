@@ -1,5 +1,6 @@
 -- github-color-scheme
-vim.cmd('colorscheme github_dark')
+-- vim.cmd('colorscheme github_dark')
+vim.cmd('colorscheme everforest')
 
 -- 表示設定
 vim.opt.number = true  -- 行番号を表示
