@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
     'JoosepAlviste/nvim-ts-context-commentstring',
     requires = { 'nvim-treesitter/nvim-treesitter' }
   }
-  use({
+  use{
     "epwalsh/obsidian.nvim",
     tag = "*",  -- recommended, use latest release instead of latest commit
     requires = {
@@ -82,14 +82,20 @@ return require('packer').startup(function(use)
     },
     config = function()
     end,
-  })
+  }
   use "EdenEast/nightfox.nvim" 
-  use({
+  use {
     "neanias/everforest-nvim",
-    -- Optional; default configuration will be used if setup isn't called.
     config = function()
-      require("everforest").setup()
-    end,
-  })
+      require "extensions.everforest"
+    end
+  }
+  -- 存在するだけでcolortheme書き換えるのでかなりやばいです
+  -- use {
+  --   'rmehri01/onenord.nvim',
+  --   config = function()
+  --     require('onenord').setup()
+  --   end
+  -- }
 end)
 
