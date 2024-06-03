@@ -90,6 +90,7 @@ return require('packer').startup(function(use)
       require "extensions.everforest"
     end
   }
+  
   -- 存在するだけでcolortheme書き換えるのでかなりやばいです
   -- use {
   --   'rmehri01/onenord.nvim',
