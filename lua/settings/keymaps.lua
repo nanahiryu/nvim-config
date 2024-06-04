@@ -19,6 +19,17 @@ keyset('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
 keyset('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
 keyset('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
 
+--- coc: code jump
+keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
+keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
+
+-- Use `[g` and `]g` to navigate diagnostics
+-- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", {silent = true})
+keyset("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
+
 
 -- insert
 keyset('i', '<C-l>', '<Right>', opts)
@@ -28,3 +39,4 @@ keyset('i', '<C-h>', '<Left>', opts)
 keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts_coc)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts_coc)
 keyset("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts_coc)
+
