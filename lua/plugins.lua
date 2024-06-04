@@ -70,10 +70,12 @@ return require('packer').startup(function(use)
     requires = {
       -- Required.
       "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
       "nvim-telescope/telescope.nvim",
       "nvim-treesitter/nvim-treesitter"
     },
     config = function()
+      require "extensions.obsidian"
     end,
   }
   use "EdenEast/nightfox.nvim" 

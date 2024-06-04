@@ -15,6 +15,9 @@ vim.opt.expandtab = true  -- Tabインデント時に設定個数分の半角ス
 vim.opt.shiftwidth = 2  -- オートインデント時のズレ幅を半角スペース2つ分に設定
 vim.opt.compatible = false
 
+-- for obsidian
+vim.opt.conceallevel = 1
+
 -- 検索設定
 vim.opt.ignorecase = true  -- 大文字/小文字の区別なく検索
 vim.opt.smartcase = true  -- 検索文字列に大文字/小文字が混在した場合のみ区別して検索
