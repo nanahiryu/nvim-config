@@ -16,7 +16,12 @@
     "markdown",
     "html"
   ],
-  "tsserver.formatOnType": true,
+  "markdownlint.config": {
+    "MD007": { "indent": 4 },
+    "MD012": false,
+    "MD013": false,
+    "MD030": false
+  },
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
     "javascript",
