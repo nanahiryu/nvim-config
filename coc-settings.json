@@ -14,7 +14,8 @@
     "javascriptreact",
     "json",
     "markdown",
-    "html"
+    "html",
+    "lua"
   ],
   "markdownlint.config": {
     "MD007": { "indent": 4 },
@@ -29,6 +30,7 @@
     "typescript",
     "typescriptreact",
     "markdown",
-    "html"
+    "html",
+    "lua"
   ]
 }

@@ -2,7 +2,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  use {'wbthomason/packer.nvim'}
+  use { 'wbthomason/packer.nvim' }
   use {
     'nvim-tree/nvim-tree.lua',
     config = function() require 'extensions.nvim-tree' end,
@@ -10,9 +10,9 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional
     },
   }
-  use {'projekt0n/github-nvim-theme'}
+  use { 'projekt0n/github-nvim-theme' }
   use {
-    'neoclide/coc.nvim', 
+    'neoclide/coc.nvim',
     branch = 'release',
     config = function() require 'extensions.coc' end,
   }
@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',-- or... tag = '0.1.1'
+    branch = '0.1.x', -- or... tag = '0.1.1'
     config = function() require 'extensions.telescope' end,
     requires = {
       'nvim-tree/nvim-web-devicons', 'nvim-lua/plenary.nvim',
@@ -49,24 +49,24 @@ return require('packer').startup(function(use)
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
     end
   }
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require 'extensions.comment'
+      require 'extensions.comment'
     end
   }
   use {
     'JoosepAlviste/nvim-ts-context-commentstring',
     requires = { 'nvim-treesitter/nvim-treesitter' }
   }
-  use{
+  use {
     "epwalsh/obsidian.nvim",
-    tag = "*",  -- recommended, use latest release instead of latest commit
+    tag = "*", -- recommended, use latest release instead of latest commit
     requires = {
       -- Required.
       "nvim-lua/plenary.nvim",
@@ -78,14 +78,20 @@ return require('packer').startup(function(use)
       require "extensions.obsidian"
     end,
   }
-  use "EdenEast/nightfox.nvim" 
+  use "EdenEast/nightfox.nvim"
   use {
     "neanias/everforest-nvim",
     config = function()
       require "extensions.everforest"
     end
   }
-  
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require "extensions.indent-blankline"
+    end
+
+  }
   -- 存在するだけでcolortheme書き換えるのでかなりやばいです
   -- use {
   --   'rmehri01/onenord.nvim',
@@ -94,4 +100,3 @@ return require('packer').startup(function(use)
   --   end
   -- }
 end)
-
