@@ -8,6 +8,13 @@ telescope.setup {
       },
     },
     winblend = 20,
+    sorting_strategy = "ascending",
+    layout_config = {
+      height = 100,
+      vertical = { width = 1 },
+      preview_cutoff = 100,
+      preview_width = 0.6
+    }
   },
 }
 telescope.load_extension 'fzf'
