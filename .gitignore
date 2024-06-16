@@ -1,2 +1,2 @@
 /plugin/packer_compiled.lua
-/lua/extensions/obsidian.lua
+/lua/env/*_env.lua
