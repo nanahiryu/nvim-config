@@ -92,6 +92,17 @@ return require('packer').startup(function(use)
     end
 
   }
+  use {
+    "NeogitOrg/neogit",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function()
+      require "extensions.neogit"
+    end
+  }
   -- 存在するだけでcolortheme書き換えるのでかなりやばいです
   -- use {
   --   'rmehri01/onenord.nvim',
