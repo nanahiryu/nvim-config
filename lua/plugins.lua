@@ -103,6 +103,12 @@ return require('packer').startup(function(use)
       require "extensions.neogit"
     end
   }
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require "extensions.gitsigns"
+    end
+  }
   -- 存在するだけでcolortheme書き換えるのでかなりやばいです
   -- use {
   --   'rmehri01/onenord.nvim',
