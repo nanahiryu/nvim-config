@@ -1,11 +1,6 @@
 local env_table = require("env.obsidian_env")
 require("obsidian").setup({
   workspaces = env_table.workspaces,
-  daily_notes = env_table.daily_notes,
-  -- 他のオプションもここに追加
-})
-require("obsidian").setup({
-  workspaces = env_table.workspaces,
   -- see below for full list of options 👇
   daily_notes = env_table.daily_notes,
   completion = {
