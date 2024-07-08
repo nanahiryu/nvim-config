@@ -78,6 +78,16 @@ return require('packer').startup(function(use)
       require "extensions.obsidian"
     end,
   }
+  use {
+    'oflisback/obsidian-bridge.nvim',
+    config = function()
+      require "extensions.obsidian-bridge"
+    end,
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+  }
   use "EdenEast/nightfox.nvim"
   use {
     "neanias/everforest-nvim",
