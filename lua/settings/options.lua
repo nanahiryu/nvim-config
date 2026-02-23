@@ -1,5 +1,3 @@
--- github-color-scheme
--- vim.cmd[[colorscheme github_dark]]
 -- everforest
 vim.cmd [[colorscheme everforest]]
 
@@ -26,24 +24,5 @@ vim.opt.wrapscan = true   -- 末尾まで検索したら先頭に戻る
 -- yankをclipboardに
 vim.opt.clipboard:append('unnamed')
 
--- LightLineにcoc.nvimのステータスを載せる
-vim.g.lightline = {
-  active = {
-    right = {
-      { 'coc' }
-    }
-  },
-  component_function = {
-    coc = 'coc#status'
-  }
-}
-
--- Diagnosticsの、左横のアイコンの色設定
-vim.cmd('highlight CocErrorSign ctermfg=15 ctermbg=196')
-vim.cmd('highlight CocWarningSign ctermfg=0 ctermbg=172')
-
--- :PackerInstall時にPackerCompileもさせる
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "plugins.lua" },
-  command = "PackerCompile",
-})
+-- スムーズスクロール
+vim.opt.smoothscroll = true
