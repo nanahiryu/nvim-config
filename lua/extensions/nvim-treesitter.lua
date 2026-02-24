@@ -1,24 +1,19 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = { 'lua', "javascript", "typescript",  "tsx", "html", "css", "markdown", "markdown_inline" },
-  sync_install = true,
-  auto_install = true,
+require('nvim-treesitter').setup {}
 
-  highlight = {
-    enable = true,
-  },
+-- パーサーの自動インストール
+local ensure_installed = { 'lua', 'javascript', 'typescript', 'tsx', 'html', 'css', 'markdown', 'markdown_inline' }
+for _, lang in ipairs(ensure_installed) do
+  pcall(function()
+    vim.cmd('TSInstall! ' .. lang)
+  end)
+end
 
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = 'gnn',
-      node_incremental = 'grn',
-      scope_incremental = 'grc',
-      node_decremental = 'grm',
-    },
-  },
+-- ハイライト有効化
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
 
-  indent = {
-    enable = true,
-  },
-}
-
+-- インデント
+vim.opt.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
