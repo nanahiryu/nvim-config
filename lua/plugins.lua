@@ -55,7 +55,7 @@ require("lazy").setup({
   -- ファジーファインダー
   {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
+    branch = "master",
     cmd = "Telescope",
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<cr>" },
@@ -98,14 +98,10 @@ require("lazy").setup({
 
   -- Git
   {
-    "NeogitOrg/neogit",
-    cmd = "Neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function() require("extensions.neogit") end,
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit",
+    keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
     "lewis6991/gitsigns.nvim",
