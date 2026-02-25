@@ -19,13 +19,11 @@ require("lazy").setup({
   },
 
   -- カラースキーム
-  { "projekt0n/github-nvim-theme", lazy = true },
-  { "EdenEast/nightfox.nvim", lazy = true },
   {
-    "neanias/everforest-nvim",
+    "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
-    config = function() require("extensions.everforest") end,
+    config = function() require("extensions.kanagawa") end,
   },
 
   -- treesitter

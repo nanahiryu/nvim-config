@@ -1,5 +1,5 @@
--- everforest
-vim.cmd [[colorscheme everforest]]
+-- kanagawa
+vim.cmd [[colorscheme kanagawa]]
 
 -- 表示設定
 vim.opt.number = true       -- 行番号を表示

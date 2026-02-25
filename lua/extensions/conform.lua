@@ -7,7 +7,7 @@ require("conform").setup({
     json = { "biome", "prettier", stop_after_first = true },
     html = { "prettier" },
     css = { "prettier" },
-    markdown = { "prettier" },
+    markdown = { "markdownlint-cli2", "prettier", stop_after_first = true },
     yaml = { "prettier" },
     lua = { "stylua" },
   },
