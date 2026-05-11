@@ -3,6 +3,7 @@ vim.cmd [[colorscheme kanagawa]]
 
 -- 表示設定
 vim.opt.number = true       -- 行番号を表示
+vim.opt.cursorline = true   -- カーソル行をハイライト
 vim.opt.title = true        -- 編集中のファイル名を表示
 vim.opt.showmatch = true    -- 括弧入力時の対応する括弧を表示
 vim.cmd('syntax on')        -- コードの色分け
